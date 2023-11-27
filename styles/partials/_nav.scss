@@ -1,0 +1,16 @@
+@use "./variables" as *;
+
+.nav {
+  &__list {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &__links {
+    list-style: none;
+  }
+  &__link {
+    text-decoration: none;
+    color: $tertiary-font-color;
+  }
+}

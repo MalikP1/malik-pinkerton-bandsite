@@ -1,0 +1,14 @@
+@use "./variables" as *;
+.hero {
+  background-image: url("../../assets/images/hero-bio.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 30rem;
+  display: flex;
+  align-items: center;
+  &__title {
+    color: $tertiary-font-color;
+    margin: 0;
+    padding-left: 3rem;
+  }
+}

@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #323232;
+  padding-bottom: 1rem;
+}
+.header__title {
+  text-align: center;
+  margin-top: 0;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-evenly;
+}
+.nav__links {
+  list-style: none;
+}
+.nav__link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.hero {
+  background-image: url("../../assets/images/hero-bio.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 30rem;
+  display: flex;
+  align-items: center;
+}
+.hero__title {
+  color: #ffffff;
+  margin: 0;
+  padding-left: 3rem;
+}/*# sourceMappingURL=bio.css.map */

@@ -1,0 +1,10 @@
+@use "./variables" as *;
+
+.header {
+  background-color: $primary-font-color;
+  padding-bottom: 1rem;
+  &__title {
+    text-align: center;
+    margin-top: 0;
+  }
+}
