@@ -63,4 +63,13 @@ body {
 }
 .about__text {
   margin: 1rem;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+}
+.gallery__image {
+  margin: 1rem auto;
+  width: 90%;
 }/*# sourceMappingURL=bio.css.map */
