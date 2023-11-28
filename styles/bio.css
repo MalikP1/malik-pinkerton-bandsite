@@ -14,7 +14,7 @@ body {
 .header__link {
   display: flex;
   justify-content: center;
-  padding-top: 1rem;
+  padding: 1rem 0;
 }
 
 .nav__list {
@@ -70,6 +70,9 @@ body {
   display: flex;
   flex-direction: column;
 }
+.gallery__title {
+  padding-left: 1rem;
+}
 .gallery__image {
   margin: 1rem auto;
   width: 90%;
@@ -88,6 +91,12 @@ body {
   margin: 1rem;
   display: none;
 }
+.footer__contact-details {
+  margin-top: 2rem;
+}
+.footer__bottom {
+  margin-top: 1rem;
+}
 .footer__copyright {
   margin-bottom: 0;
   padding-bottom: 2rem;
@@ -97,6 +106,14 @@ body {
   padding-bottom: 1rem;
 }
 
+.get-in-touch__link {
+  padding-right: 1rem;
+}
+
+@font-face {
+  font-family: Avenir;
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf");
+}
 .main {
   display: flex;
   flex-direction: column;

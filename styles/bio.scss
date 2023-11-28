@@ -7,6 +7,9 @@
 @use "./partials/gallery" as *;
 @use "./partials/footer" as *;
 @use "./partials/contacts" as *;
+@use "./partials/get-in-touch" as *;
+@use "./partials/mixins" as *;
+
 .main {
   display: flex;
   flex-direction: column;
