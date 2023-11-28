@@ -48,10 +48,19 @@ body {
   flex-direction: column;
 }
 .about__title {
-  padding-left: 1rem;
+  margin: 1rem;
 }
 .about__image {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+}
+.about__quote {
+  margin: 1rem;
+}
+.about__sub-heading {
+  margin-left: 1rem;
+}
+.about__text {
+  margin: 1rem;
 }/*# sourceMappingURL=bio.css.map */
