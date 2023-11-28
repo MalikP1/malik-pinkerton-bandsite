@@ -5,3 +5,9 @@
 @use "./partials/hero" as *;
 @use "./partials/about" as *;
 @use "./partials/gallery" as *;
+@use "./partials/footer" as *;
+@use "./partials/contacts" as *;
+.main {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,21 @@
+@use "./variables" as *;
+
+.footer {
+  background-color: $primary-font-color;
+  color: $tertiary-font-color;
+  padding-left: 1rem;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__link {
+  }
+  &__logo {
+    margin: 1rem;
+    display: none;
+  }
+  &__copyright {
+    margin-bottom: 0;
+    padding-bottom: 2rem;
+  }
+}

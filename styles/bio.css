@@ -11,9 +11,10 @@ body {
   background-color: #323232;
   padding-bottom: 1rem;
 }
-.header__title {
-  text-align: center;
-  margin-top: 0;
+.header__link {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
 }
 
 .nav__list {
@@ -72,4 +73,31 @@ body {
 .gallery__image {
   margin: 1rem auto;
   width: 90%;
+}
+
+.footer {
+  background-color: #323232;
+  color: #ffffff;
+  padding-left: 1rem;
+}
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__logo {
+  margin: 1rem;
+  display: none;
+}
+.footer__copyright {
+  margin-bottom: 0;
+  padding-bottom: 2rem;
+}
+
+.contacts {
+  padding-bottom: 1rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=bio.css.map */
