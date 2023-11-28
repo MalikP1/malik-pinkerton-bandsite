@@ -40,4 +40,18 @@ body {
   color: #ffffff;
   margin: 0;
   padding-left: 3rem;
+}
+
+.about {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.about__title {
+  padding-left: 1rem;
+}
+.about__image {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }/*# sourceMappingURL=bio.css.map */
