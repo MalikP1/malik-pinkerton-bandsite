@@ -10,13 +10,43 @@ body {
 .header {
   background-color: #323232;
   padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    flex-direction: row;
+  }
 }
 .header__link {
   display: flex;
   justify-content: center;
   padding: 1rem 0;
 }
+@media screen and (min-width: 768px) {
+  .header__link {
+    padding: 1rem;
+  }
+}
+.header__logo {
+  height: 2rem;
+}
 
+@font-face {
+  font-family: Avenir;
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype"), url("../../assets/fonts/alternative-files/AvenirNextLTProBold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: Avenir;
+  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype"), url("../../assets/fonts/alternative-files/AvenirNextLTProDemi.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: Avenir;
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype"), url("../../assets/fonts/alternative-files/AvenirNextLTPro.ttf") format("truetype");
+  font-weight: 400;
+}
 .nav__list {
   display: flex;
   justify-content: space-evenly;
@@ -24,9 +54,21 @@ body {
 .nav__links {
   list-style: none;
 }
+@media screen and (min-width: 768px) {
+  .nav__links {
+    margin-right: 3rem;
+  }
+}
+.nav__links--active {
+  border-bottom: 5px solid #e1e1e1;
+}
 .nav__link {
   text-decoration: none;
   color: #ffffff;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: "Avenir";
+  font-weight: 600;
 }
 
 .hero {
@@ -73,9 +115,25 @@ body {
 .gallery__title {
   padding-left: 1rem;
 }
+.gallery__images {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .gallery__images {
+    flex-direction: row;
+    margin-bottom: 1rem;
+  }
+}
 .gallery__image {
   margin: 1rem auto;
   width: 90%;
+}
+@media screen and (min-width: 768px) {
+  .gallery__image {
+    width: 30%;
+    flex-wrap: wrap;
+    margin: 0.5rem;
+  }
 }
 
 .footer {
@@ -87,12 +145,33 @@ body {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (min-width: 768px) {
+  .footer__title {
+    margin-right: 2rem;
+  }
+}
 .footer__logo {
   margin: 1rem;
   display: none;
 }
+@media screen and (min-width: 768px) {
+  .footer__logo {
+    display: inline-block;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__image--tablet {
+    display: none;
+  }
+}
 .footer__contact-details {
   margin-top: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__contact-details {
+    display: flex;
+    justify-content: space-evenly;
+  }
 }
 .footer__bottom {
   margin-top: 1rem;
@@ -105,15 +184,36 @@ body {
 .contacts {
   padding-bottom: 1rem;
 }
+@media screen and (min-width: 768px) {
+  .contacts {
+    margin-left: -1rem;
+  }
+}
+.contacts__name {
+  margin: 0;
+}
+.contacts__company {
+  margin-top: 0.3rem;
+}
+.contacts__location {
+  margin: 0;
+}
+.contacts__booking {
+  margin: 0;
+}
 
-.get-in-touch__link {
+@media screen and (min-width: 768px) {
+  .get-in-touch {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+  }
+}
+
+.social-media__link {
   padding-right: 1rem;
 }
 
-@font-face {
-  font-family: Avenir;
-  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf");
-}
 .main {
   display: flex;
   flex-direction: column;

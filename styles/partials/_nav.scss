@@ -1,16 +1,26 @@
 @use "./variables" as *;
+@use "./mixins" as *;
+@use "./breakpoints" as *;
 
 .nav {
   &__list {
     display: flex;
     justify-content: space-evenly;
   }
-
   &__links {
     list-style: none;
+    @include tablet {
+      margin-right: 3rem;
+    }
+    &--active {
+      border-bottom: 5px solid $divider-line-color;
+    }
   }
   &__link {
     text-decoration: none;
     color: $tertiary-font-color;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    @include demi-font;
   }
 }

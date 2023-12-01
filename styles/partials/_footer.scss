@@ -1,4 +1,5 @@
 @use "./variables" as *;
+@use "./breakpoints" as *;
 
 .footer {
   background-color: $primary-font-color;
@@ -10,12 +11,31 @@
   }
   &__link {
   }
+  &__title {
+    @include tablet {
+      margin-right: 2rem;
+    }
+  }
   &__logo {
     margin: 1rem;
     display: none;
+    @include tablet {
+      display: inline-block;
+    }
+  }
+  &__image {
+    &--tablet {
+      @include tablet {
+        display: none;
+      }
+    }
   }
   &__contact-details {
     margin-top: 2rem;
+    @include tablet {
+      display: flex;
+      justify-content: space-evenly;
+    }
   }
   &__bottom {
     margin-top: 1rem;

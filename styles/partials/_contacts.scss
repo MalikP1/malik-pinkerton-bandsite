@@ -1,3 +1,21 @@
+@use "./breakpoints" as *;
 .contacts {
   padding-bottom: 1rem;
+  @include tablet {
+    margin-left: -1rem;
+  }
+  &__name {
+    margin: 0;
+    @include tablet {
+    }
+  }
+  &__company {
+    margin-top: 0.3rem;
+  }
+  &__location {
+    margin: 0;
+  }
+  &__booking {
+    margin: 0;
+  }
 }

@@ -1,4 +1,40 @@
 @font-face {
   font-family: Avenir;
-  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf");
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype"),
+    url("../../assets/fonts/alternative-files/AvenirNextLTProBold.ttf")
+      format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Avenir;
+  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype"),
+    url("../../assets/fonts/alternative-files/AvenirNextLTProDemi.ttf")
+      format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Avenir;
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype"),
+    url("../../assets/fonts/alternative-files/AvenirNextLTPro.ttf")
+      format("truetype");
+  font-weight: 400;
+}
+
+$site-man-font: "Avenir";
+
+@mixin regular-font {
+  font-family: $site-man-font;
+  font-weight: 400;
+}
+
+@mixin demi-font {
+  font-family: $site-man-font;
+  font-weight: 600;
+}
+
+@mixin bold-font {
+  font-family: $site-man-font;
+  font-weight: 700;
 }

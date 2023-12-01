@@ -1,11 +1,23 @@
 @use "./variables" as *;
+@use "./breakpoints" as *;
 
 .header {
   background-color: $primary-font-color;
   padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  @include tablet {
+    flex-direction: row;
+  }
   &__link {
     display: flex;
     justify-content: center;
     padding: 1rem 0;
+    @include tablet {
+      padding: 1rem;
+    }
+  }
+  &__logo {
+    height: 2rem;
   }
 }

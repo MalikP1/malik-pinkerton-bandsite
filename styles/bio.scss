@@ -9,6 +9,8 @@
 @use "./partials/contacts" as *;
 @use "./partials/get-in-touch" as *;
 @use "./partials/mixins" as *;
+@use "./partials/breakpoints" as *;
+@use "./partials/social-media" as *;
 
 .main {
   display: flex;

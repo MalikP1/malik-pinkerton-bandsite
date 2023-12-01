@@ -16,7 +16,7 @@
       /></a>
       <nav class="nav">
         <ul class="nav__list">
-          <li class="nav__links">
+          <li class="nav__links nav__links--active">
             <a href="#" class="nav__link">Biography</a>
           </li>
           <li class="nav__links"><a href="#" class="nav__link">Shows</a></li>
@@ -64,76 +64,85 @@
       </section>
       <section class="gallery">
         <h2 class="gallery__title">Photo Gallery</h2>
-        <img
-          class="gallery__image"
-          src="./assets/images/Photo-gallery-1.jpg"
-          alt="Gallery photo 1"
-        />
-        <img
-          class="gallery__image"
-          src="./assets/images/Photo-gallery-2.jpg"
-          alt="Gallery photo 2"
-        />
-        <img
-          class="gallery__image"
-          src="./assets/images/Photo-gallery-3.jpg"
-          alt="Gallery photo 3"
-        />
-        <img
-          class="gallery__image"
-          src="./assets/images/Photo-gallery-4.jpg"
-          alt="Gallery photo 4"
-        />
-        <img
-          class="gallery__image"
-          src="./assets/images/Photo-gallery-5.jpg"
-          alt="Gallery photo 5"
-        />
-        <img
-          class="gallery__image"
-          src="./assets/images/Photo-gallery-6.jpg"
-          alt="Gallery photo 6"
-        />
-        <img
-          class="gallery__image"
-          src="./assets/images/Photo-gallery-7.jpg"
-          alt="Gallery photo 7"
-        />
-        <img
-          class="gallery__image"
-          src="./assets/images/Photo-gallery-8.jpg"
-          alt="Gallery photo 8"
-        />
-        <img
-          class="gallery__image"
-          src="./assets/images/Photo-gallery-9.jpg"
-          alt="Gallery photo 9"
-        />
+        <article class="gallery__images">
+          <img
+            class="gallery__image"
+            src="./assets/images/Photo-gallery-1.jpg"
+            alt="Gallery photo 1"
+          />
+          <img
+            class="gallery__image"
+            src="./assets/images/Photo-gallery-2.jpg"
+            alt="Gallery photo 2"
+          />
+          <img
+            class="gallery__image"
+            src="./assets/images/Photo-gallery-3.jpg"
+            alt="Gallery photo 3"
+          />
+          <img
+            class="gallery__image"
+            src="./assets/images/Photo-gallery-4.jpg"
+            alt="Gallery photo 4"
+          />
+          <img
+            class="gallery__image"
+            src="./assets/images/Photo-gallery-5.jpg"
+            alt="Gallery photo 5"
+          />
+          <img
+            class="gallery__image"
+            src="./assets/images/Photo-gallery-6.jpg"
+            alt="Gallery photo 6"
+          />
+          <img
+            class="gallery__image"
+            src="./assets/images/Photo-gallery-7.jpg"
+            alt="Gallery photo 7"
+          />
+          <img
+            class="gallery__image"
+            src="./assets/images/Photo-gallery-8.jpg"
+            alt="Gallery photo 8"
+          />
+          <img
+            class="gallery__image"
+            src="./assets/images/Photo-gallery-9.jpg"
+            alt="Gallery photo 9"
+          />
+        </article>
       </section>
     </main>
     <footer class="footer">
       <section class="footer__top">
         <article class="get-in-touch">
-          <h2 class="get-in-touch__title">Get in Touch</h2>
-          <a class="get-in-touch__links" href="https://www.instagram.com/"
-            ><img
-              class="get-in-touch__link"
-              src="./assets/icons/Icon-instagram.svg"
-              alt="Instagram"
-          /></a>
-          <a class="get-in-touch__links" href="https://en-gb.facebook.com/"
-            ><img
-              class="get-in-touch__link"
-              src="./assets/icons/Icon-facebook.svg"
-              alt="Instagram"
-          /></a>
-          <a class="get-in-touch__links" href="hsttps://twitter.com/?lang=en-gb"
-            ><img
-              class="get-in-touch__link"
-              src="./assets/icons/Icon-twitter.svg"
-              alt="Instagram"
-          /></a>
+          <div class="footer__title">
+            <h2 class="footer__title-name">Get in Touch</h2>
+          </div>
+          <div class="social-media">
+            <a class="social-media__links" href="https://www.instagram.com/"
+              ><img
+                class="social-media__link"
+                src="./assets/icons/Icon-instagram.svg"
+                alt="Instagram"
+            /></a>
+            <a class="social-media__links" href="https://en-gb.facebook.com/"
+              ><img
+                class="social-media__link"
+                src="./assets/icons/Icon-facebook.svg"
+                alt="Instagram"
+            /></a>
+            <a
+              class="social-media__links"
+              href="hsttps://twitter.com/?lang=en-gb"
+              ><img
+                class="social-media__link"
+                src="./assets/icons/Icon-twitter.svg"
+                alt="Instagram"
+            /></a>
+          </div>
         </article>
+
         <article class="footer__logo">
           <a class="footer__link" href="#"
             ><img
@@ -169,7 +178,7 @@
       <section class="footer__bottom">
         <a class="footer__link" href="#"
           ><img
-            class="footer__image"
+            class="footer__image footer__image--tablet"
             src="./assets/logos/Logo-bandsite.svg"
             alt="Bandsite Logo"
         /></a>

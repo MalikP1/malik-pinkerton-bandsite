@@ -1,9 +1,8 @@
+@use "./breakpoints" as *;
 .get-in-touch {
-  &__title {
-  }
-  &__links {
-  }
-  &__link {
-    padding-right: 1rem;
+  @include tablet {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
   }
 }
