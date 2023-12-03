@@ -16,7 +16,7 @@
     text-align: center;
     height: 2.5rem;
     @include tablet {
-      margin-right: 3rem;
+      padding: 0 1rem;
     }
     &--active,
     &:hover {
@@ -29,6 +29,9 @@
     font-size: 0.625rem;
     line-height: 1.25rem;
     @include demi-font;
+    @include tablet {
+      font-size: 0.75rem;
+    }
     &--active,
     &:hover {
       color: $tertiary-font-color;

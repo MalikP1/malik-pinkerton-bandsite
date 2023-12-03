@@ -1,0 +1,13 @@
+@use "./breakpoints" as *;
+
+.paragraphs {
+  @include tablet {
+    display: flex;
+    padding: 2.25rem 2.25rem 0;
+  }
+}
+.paragraph {
+  &__one {
+    padding-right: 1rem;
+  }
+}

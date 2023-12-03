@@ -4,7 +4,11 @@
   display: flex;
   justify-content: space-between;
   padding-top: 1rem;
+
   &__links {
+    @include tablet {
+      padding-right: 2.25rem;
+    }
   }
   &__link {
   }

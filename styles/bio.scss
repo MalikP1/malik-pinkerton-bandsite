@@ -11,6 +11,7 @@
 @use "./partials/mixins" as *;
 @use "./partials/breakpoints" as *;
 @use "./partials/social-media" as *;
+@use "./partials/paragraphs" as *;
 
 .main {
   display: flex;

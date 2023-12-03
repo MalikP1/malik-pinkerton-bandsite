@@ -10,6 +10,10 @@
     display: flex;
     justify-content: space-between;
     margin-top: 1rem;
+    @include tablet {
+      margin: 0;
+      align-items: baseline;
+    }
   }
   &__link {
   }
@@ -23,22 +27,26 @@
       @include tablet {
         font-size: 2.25rem;
         line-height: 2.75rem;
+        padding: 3rem 2.25rem 0 0;
       }
-    }
-    @include tablet {
-      margin-right: 2rem;
     }
   }
   &__logo {
     margin: 1rem;
     display: none;
     @include tablet {
-      display: inline-block;
+      display: flex;
+    }
+  }
+  &__link {
+    @include tablet {
+      padding-right: 1rem;
     }
   }
   &__image {
     height: 1.25rem;
     width: 7.5rem;
+
     &--tablet {
       @include tablet {
         display: none;
@@ -48,11 +56,16 @@
   &__contact-details {
     @include tablet {
       display: flex;
-      justify-content: space-evenly;
+      width: 100%;
+      padding-right: 1rem;
+      justify-content: space-between;
     }
   }
   &__bottom {
     padding-top: 4rem;
+    @include tablet {
+      padding: 0;
+    }
   }
   &__copyright {
     margin: 0;
@@ -61,5 +74,10 @@
     font-size: 0.8125rem;
     line-height: 1.125rem;
     padding: 1rem 0 2rem;
+    @include tablet {
+      padding: 1.25rem 0 2.25rem;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+    }
   }
 }

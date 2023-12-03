@@ -1,4 +1,5 @@
 @use "./breakpoints" as *;
+
 .get-in-touch {
   @include tablet {
     display: flex;
