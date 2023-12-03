@@ -5,6 +5,9 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  @include desktop {
+    padding: 0 2.25rem;
+  }
   &__title {
     padding: 1.5rem 1rem 0;
     margin: 0;
@@ -15,6 +18,9 @@
       font-size: 2.25rem;
       line-height: 2.75rem;
       padding-top: 3rem;
+    }
+    @include desktop {
+      padding-left: 0;
     }
   }
   &__image {

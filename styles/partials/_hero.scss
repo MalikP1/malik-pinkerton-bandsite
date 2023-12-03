@@ -21,5 +21,8 @@
       font-size: 3.75rem;
       line-height: 4.25rem;
     }
+    @include desktop {
+      padding-left: 2.25rem;
+    }
   }
 }

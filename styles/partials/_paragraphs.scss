@@ -9,5 +9,8 @@
 .paragraph {
   &__one {
     padding-right: 1rem;
+    @include desktop {
+      padding-right: 2.25rem;
+    }
   }
 }

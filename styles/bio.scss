@@ -16,4 +16,7 @@
 .main {
   display: flex;
   flex-direction: column;
+  @include desktop {
+    margin: 0 auto;
+  }
 }

@@ -6,6 +6,10 @@
   background-color: $primary-font-color;
   color: $tertiary-font-color;
   padding-left: 1rem;
+  @include desktop {
+    padding: 0 2.25rem;
+    margin: 0 auto;
+  }
   &__top {
     display: flex;
     justify-content: space-between;
@@ -59,6 +63,9 @@
       width: 100%;
       padding-right: 1rem;
       justify-content: space-between;
+    }
+    @include desktop {
+      width: 80%;
     }
   }
   &__bottom {

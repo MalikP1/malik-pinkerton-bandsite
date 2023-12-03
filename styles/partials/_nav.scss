@@ -8,6 +8,9 @@
     justify-content: space-evenly;
     margin: 0;
     padding: 0;
+    @include tablet {
+      width: 100%;
+    }
   }
   &__links {
     list-style: none;
@@ -16,7 +19,7 @@
     text-align: center;
     height: 2.5rem;
     @include tablet {
-      padding: 0 1rem;
+      padding: 0 1.125rem;
     }
     &--active,
     &:hover {

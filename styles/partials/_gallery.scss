@@ -15,6 +15,9 @@
       line-height: 2.75rem;
       padding: 3rem 1rem 0;
     }
+    @include desktop {
+      padding-left: 2.25rem;
+    }
   }
   &__images {
     width: 100%;
@@ -24,6 +27,9 @@
       flex-wrap: wrap;
       padding: 1rem 0 1.25rem 1rem;
       justify-content: space-evenly;
+    }
+    @include desktop {
+      padding: 2.25rem 0 0.75rem 2.25rem;
     }
   }
   &__image {
