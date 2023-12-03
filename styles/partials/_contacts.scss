@@ -26,18 +26,14 @@
   }
   &__location,
   &__booking,
-  &__email {
+  &__email,
+  &__link {
     color: $secondary-font-color;
-  }
-  &__name {
-    @include tablet {
-    }
   }
   &__company {
     padding-bottom: 1rem;
   }
-  &__location {
-  }
-  &__booking {
+  &__link {
+    text-decoration: none;
   }
 }

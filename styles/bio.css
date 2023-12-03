@@ -110,6 +110,16 @@ body {
   display: flex;
   align-items: center;
 }
+@media screen and (min-width: 768px) {
+  .hero {
+    height: 30rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero {
+    height: 40rem;
+  }
+}
 .hero__title {
   color: #ffffff;
   margin: 0;
@@ -263,13 +273,16 @@ body {
   }
 }
 .gallery__image {
-  padding: 1rem 1rem 0;
+  margin: 1rem 1rem 0;
   width: 100%;
+}
+.gallery__image:hover {
+  border: 4px solid #000000;
 }
 @media screen and (min-width: 768px) {
   .gallery__image {
     width: 32%;
-    padding: 0 1rem 1.5rem 0;
+    margin: 0 1rem 1.5rem 0;
   }
 }
 
@@ -392,12 +405,16 @@ body {
 .contacts__name, .contacts__email {
   padding-top: 1rem;
 }
-.contacts__location, .contacts__booking, .contacts__email {
+.contacts__location, .contacts__booking, .contacts__email, .contacts__link {
   color: #afafaf;
 }
 .contacts__company {
   padding-bottom: 1rem;
 }
+.contacts__link {
+  text-decoration: none;
+}
+
 @media screen and (min-width: 768px) {
   .get-in-touch {
     display: flex;
@@ -416,6 +433,7 @@ body {
     padding-right: 2.25rem;
   }
 }
+
 @media screen and (min-width: 768px) {
   .paragraphs {
     display: flex;

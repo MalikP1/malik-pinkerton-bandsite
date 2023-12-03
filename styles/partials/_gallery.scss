@@ -1,5 +1,6 @@
 @use "./breakpoints" as *;
 @use "./mixins" as *;
+@use "./variables" as *;
 
 .gallery {
   display: flex;
@@ -33,11 +34,14 @@
     }
   }
   &__image {
-    padding: 1rem 1rem 0;
+    margin: 1rem 1rem 0;
     width: 100%;
+    &:hover {
+      border: 4px solid $hover-font-color;
+    }
     @include tablet {
       width: 32%;
-      padding: 0 1rem 1.5rem 0;
+      margin: 0 1rem 1.5rem 0;
     }
   }
 }
