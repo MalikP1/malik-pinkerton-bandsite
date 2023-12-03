@@ -3,7 +3,6 @@
 
 .header {
   background-color: $primary-font-color;
-  padding-bottom: 1rem;
   display: flex;
   flex-direction: column;
   @include tablet {
@@ -18,6 +17,7 @@
     }
   }
   &__logo {
-    height: 2rem;
+    height: 1.25rem;
+    width: 7.5rem;
   }
 }

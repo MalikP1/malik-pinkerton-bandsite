@@ -1,9 +1,11 @@
 @use "./breakpoints" as *;
 
 .social-media {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
   &__links {
   }
   &__link {
-    padding-right: 1rem;
   }
 }

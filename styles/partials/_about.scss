@@ -1,22 +1,41 @@
+@use "./mixins" as *;
+@use "./breakpoints" as *;
+
 .about {
   width: 100%;
   display: flex;
   flex-direction: column;
   &__title {
-    margin: 1rem;
+    padding: 1.5rem 1rem 0;
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    @include demi-font;
+    @include tablet {
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+    }
   }
   &__image {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    padding: 1rem 1rem 0;
   }
-  &__quote {
-    margin: 1rem;
+  &__quote,
+  &__sub-heading {
+    padding: 1rem 1rem 0;
+    margin: 0;
+    @include demi-font;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
   &__sub-heading {
-    margin-left: 1rem;
+    padding: 1.5rem 1rem 0;
   }
   &__text {
-    margin: 1rem;
+    @include regular-font;
+    padding: 1rem 1rem 0;
+    margin: 0;
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
   }
 }

@@ -1,21 +1,39 @@
 @use "./breakpoints" as *;
+@use "./mixins" as *;
+@use "./variables" as *;
+
 .contacts {
-  padding-bottom: 1rem;
   @include tablet {
     margin-left: -1rem;
   }
-  &__name {
+  &__name,
+  &__company,
+  &__location,
+  &__booking,
+  &__email {
+    @include regular-font;
     margin: 0;
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+  }
+  &__name,
+  &__email {
+    padding-top: 1rem;
+  }
+  &__location,
+  &__booking,
+  &__email {
+    color: $secondary-font-color;
+  }
+  &__name {
     @include tablet {
     }
   }
   &__company {
-    margin-top: 0.3rem;
+    padding-bottom: 1rem;
   }
   &__location {
-    margin: 0;
   }
   &__booking {
-    margin: 0;
   }
 }

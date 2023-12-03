@@ -6,21 +6,32 @@
   &__list {
     display: flex;
     justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
   }
   &__links {
     list-style: none;
+    padding-bottom: 1rem;
+    width: 50%;
+    text-align: center;
+    height: 2.5rem;
     @include tablet {
       margin-right: 3rem;
     }
-    &--active {
+    &--active,
+    &:hover {
       border-bottom: 5px solid $divider-line-color;
     }
   }
   &__link {
     text-decoration: none;
-    color: $tertiary-font-color;
-    font-size: 1.5rem;
-    line-height: 2rem;
+    color: $secondary-font-color;
+    font-size: 0.625rem;
+    line-height: 1.25rem;
     @include demi-font;
+    &--active,
+    &:hover {
+      color: $tertiary-font-color;
+    }
   }
 }
