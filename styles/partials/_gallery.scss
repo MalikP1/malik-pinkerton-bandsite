@@ -5,6 +5,7 @@
 .gallery {
   display: flex;
   flex-direction: column;
+  color: $primary-font-color;
   &__title {
     padding: 1.5rem 1rem 0;
     margin: 0;
