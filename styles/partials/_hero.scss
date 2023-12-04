@@ -3,26 +3,36 @@
 @use "./breakpoints" as *;
 
 .hero {
-  background-image: url("../../assets/images/hero-bio.jpg");
   background-size: cover;
   background-position: center;
   height: 20rem;
   width: 100%;
   display: flex;
   align-items: center;
+  box-shadow: inset 100rem 100rem rgba(50, 50, 50, 0.5);
+  &--bio {
+    background-image: url("../../assets/images/hero-bio.jpg");
+  }
+  &--shows {
+    background-image: url("../../assets/images/hero-shows.jpg");
+  }
   @include tablet {
     height: 30rem;
   }
   @include desktop {
     height: 40rem;
   }
-  &__title {
+  &__title,
+  &__sub-title {
     color: $tertiary-font-color;
     margin: 0;
     padding-left: 1rem;
     @include demi-font;
     font-size: 1.5rem;
     line-height: 2rem;
+    &--next-line {
+      display: block;
+    }
     @include tablet {
       font-size: 3.75rem;
       line-height: 4.25rem;
