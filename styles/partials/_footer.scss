@@ -8,7 +8,6 @@
   padding-left: 1rem;
   @include desktop {
     padding: 0 2.25rem;
-    margin: 0 auto;
   }
   &__top {
     display: flex;
@@ -23,12 +22,8 @@
     &-name {
       padding-top: 1.5rem;
       margin: 0;
-      font-size: 1.5rem;
-      line-height: 2rem;
-      @include demi-font;
+      @include section-header;
       @include tablet {
-        font-size: 2.25rem;
-        line-height: 2.75rem;
         padding: 3rem 2.25rem 0 0;
       }
     }
@@ -75,14 +70,10 @@
   &__copyright {
     margin: 0;
     color: $secondary-font-color;
-    @include regular-font;
-    font-size: 0.8125rem;
-    line-height: 1.125rem;
+    @include footer;
     padding: 1rem 0 2rem;
     @include tablet {
       padding: 1.25rem 0 2.25rem;
-      font-size: 0.875rem;
-      line-height: 1.25rem;
     }
   }
 }

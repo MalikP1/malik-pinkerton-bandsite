@@ -33,24 +33,19 @@
     color: $tertiary-font-color;
     margin: 0;
     padding-left: 1rem;
-    @include demi-font;
-    font-size: 1.5rem;
-    line-height: 2rem;
     &--next-line {
       display: block;
-    }
-    @include tablet {
-      font-size: 3.75rem;
-      line-height: 4.25rem;
     }
     @include desktop {
       padding-left: 2.25rem;
     }
   }
   &__title {
+    @include page-header;
     &--padding {
     }
   }
   &__sub-title {
+    @include sub-header;
   }
 }

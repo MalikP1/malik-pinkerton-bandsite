@@ -1,3 +1,5 @@
+@use "./breakpoints" as *;
+
 @font-face {
   font-family: Avenir;
   src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype"),
@@ -37,4 +39,58 @@ $site-man-font: "Avenir";
 @mixin bold-font {
   font-family: $site-man-font;
   font-weight: 700;
+}
+
+@mixin page-header {
+  @include bold-font;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  @include tablet {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+  }
+}
+@mixin section-header {
+  @include bold-font;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  @include tablet {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
+}
+@mixin sub-header {
+  @include demi-font;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  @include tablet {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+@mixin body {
+  @include regular-font;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  @include tablet {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+@mixin footer {
+  @include regular-font;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  @include tablet {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+@mixin labels-and-buttons {
+  @include bold-font;
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+  @include tablet {
+    font-size: 0.75rem;
+  }
 }

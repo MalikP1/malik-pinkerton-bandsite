@@ -1,0 +1,12 @@
+@use "./mixins" as *;
+@use "./breakpoints" as *;
+
+.tickets {
+  &__title {
+    @include section-header;
+    padding: 1.5rem 0 1rem 1rem;
+    @include tablet {
+      padding: 3rem 2.25rem 2.25rem;
+    }
+  }
+}

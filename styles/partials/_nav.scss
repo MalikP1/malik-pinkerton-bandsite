@@ -29,12 +29,7 @@
   &__link {
     text-decoration: none;
     color: $secondary-font-color;
-    font-size: 0.625rem;
-    line-height: 1.25rem;
-    @include demi-font;
-    @include tablet {
-      font-size: 0.75rem;
-    }
+    @include labels-and-buttons;
     &--active,
     &:hover {
       color: $tertiary-font-color;
