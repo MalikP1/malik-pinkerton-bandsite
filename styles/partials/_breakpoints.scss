@@ -1,6 +1,5 @@
 $tablet-breakpoint: 768px;
 $desktop-breakpoint: 1280px;
-$wide-screen-desktop-breakpoint: 1281px;
 
 @mixin tablet {
   @media screen and (min-width: $tablet-breakpoint) {
@@ -9,11 +8,6 @@ $wide-screen-desktop-breakpoint: 1281px;
 }
 @mixin desktop {
   @media screen and (min-width: $desktop-breakpoint) {
-    @content;
-  }
-}
-@mixin wide-screen {
-  @media screen and (max-width: $wide-screen-desktop-breakpoint) {
     @content;
   }
 }
