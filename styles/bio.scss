@@ -12,6 +12,8 @@
 @use "./partials/breakpoints" as *;
 @use "./partials/social-media" as *;
 @use "./partials/paragraphs" as *;
+@use "./partials/conversation" as *;
+@use "./partials/comments" as *;
 
 .main {
   display: flex;

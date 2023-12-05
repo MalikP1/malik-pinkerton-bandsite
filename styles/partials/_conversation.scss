@@ -1,0 +1,51 @@
+@use "./mixins" as *;
+@use "./breakpoints" as *;
+@use "./variables" as *;
+
+.conversation {
+  display: flex;
+  flex-direction: column;
+  @include padding-between-components;
+  &__title {
+    margin: 0;
+    @include section-header;
+    @include padding-before-headlines;
+  }
+  &__name {
+    @include padding-after-headlines;
+    display: flex;
+  }
+  &__avatar {
+    border-radius: 50%;
+    width: 2.25rem;
+    height: 2.25rem;
+    @include tablet {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+  &__comment {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $tertiary-font-color;
+    background-color: $primary-font-color;
+    padding: 1rem 0;
+    width: 20%;
+    height: 2.5rem;
+    @include labels-and-buttons;
+    border-radius: 4px;
+    &:hover {
+      background-color: $hover-font-color;
+    }
+    @include tablet {
+      width: 9.375rem;
+      padding: 0 2rem;
+    }
+  }
+}

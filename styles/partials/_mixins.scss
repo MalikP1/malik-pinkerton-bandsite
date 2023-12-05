@@ -94,3 +94,23 @@ $site-man-font: "Avenir";
     font-size: 0.75rem;
   }
 }
+@mixin padding-between-components {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  @include tablet {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
+}
+@mixin padding-after-headlines {
+  padding-top: 1rem;
+  @include tablet {
+    padding-top: 2.25rem;
+  }
+}
+@mixin padding-before-headlines {
+  padding-top: 1.5rem;
+  @include tablet {
+    padding-top: 3rem;
+  }
+}

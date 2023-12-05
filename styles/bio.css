@@ -264,6 +264,7 @@ body {
   display: flex;
   flex-direction: column;
   color: #323232;
+  background-color: #fafafa;
 }
 .gallery__title {
   padding: 1.5rem 1rem 0;
@@ -339,7 +340,6 @@ body {
 }
 @media screen and (min-width: 768px) {
   .footer__top {
-    margin: 0;
     align-items: baseline;
   }
 }
@@ -490,6 +490,92 @@ body {
 @media screen and (min-width: 1280px) {
   .paragraph__one {
     padding-right: 2.25rem;
+  }
+}
+
+.conversation {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .conversation {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
+}
+.conversation__title {
+  margin: 0;
+  font-family: "Avenir";
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding-top: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .conversation__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .conversation__title {
+    padding-top: 3rem;
+  }
+}
+.conversation__name {
+  padding-top: 1rem;
+  display: flex;
+}
+@media screen and (min-width: 768px) {
+  .conversation__name {
+    padding-top: 2.25rem;
+  }
+}
+.conversation__avatar {
+  border-radius: 50%;
+  width: 2.25rem;
+  height: 2.25rem;
+}
+@media screen and (min-width: 768px) {
+  .conversation__avatar {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+.conversation__comment {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.conversation__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  background-color: #323232;
+  padding: 1rem 0;
+  width: 20%;
+  height: 2.5rem;
+  font-family: "Avenir";
+  font-weight: 700;
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+  border-radius: 4px;
+}
+@media screen and (min-width: 768px) {
+  .conversation__button {
+    font-size: 0.75rem;
+  }
+}
+.conversation__button:hover {
+  background-color: #000000;
+}
+@media screen and (min-width: 768px) {
+  .conversation__button {
+    width: 9.375rem;
+    padding: 0 2rem;
   }
 }
 
