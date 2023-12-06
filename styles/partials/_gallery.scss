@@ -1,5 +1,5 @@
 @use "./breakpoints" as *;
-@use "./mixins" as *;
+@use "./typography" as *;
 @use "./variables" as *;
 
 .gallery {
@@ -19,7 +19,7 @@
     }
   }
   &__images {
-    width: 100%;
+    width: 95%;
     @include tablet {
       display: flex;
       flex-direction: row;
@@ -33,7 +33,7 @@
   }
   &__image {
     margin: 1rem 1rem 0;
-    width: 100%;
+    width: 95%;
     filter: grayscale(1);
     &:hover {
       filter: grayscale(0);

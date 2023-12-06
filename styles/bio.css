@@ -601,9 +601,9 @@ body {
   font-size: 0.8125rem;
   line-height: 1.125rem;
   width: 100%;
-  border-color: #afafaf;
   border-radius: 5px;
   margin-bottom: 1rem;
+  border: 1px solid #afafaf;
 }
 @media screen and (min-width: 768px) {
   .name__input {
@@ -632,7 +632,7 @@ body {
   font-size: 0.8125rem;
   line-height: 1.125rem;
   width: 100%;
-  border-color: #afafaf;
+  border: 1px solid #afafaf;
   border-radius: 5px;
 }
 @media screen and (min-width: 768px) {

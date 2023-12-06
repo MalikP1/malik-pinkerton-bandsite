@@ -1,6 +1,7 @@
-@use "./mixins" as *;
+@use "./typography" as *;
 @use "./breakpoints" as *;
 @use "./variables" as *;
+@use "./mixins" as *;
 
 .conversation {
   display: flex;
@@ -71,9 +72,9 @@
     color: $primary-font-color;
     @include body;
     width: 100%;
-    border-color: $secondary-font-color;
     border-radius: 5px;
     margin-bottom: 1rem;
+    border: 1px solid $secondary-font-color;
   }
 }
 .comment {
@@ -86,7 +87,7 @@
     color: $primary-font-color;
     @include body;
     width: 100%;
-    border-color: $secondary-font-color;
+    border: 1px solid $secondary-font-color;
     border-radius: 5px;
   }
 }

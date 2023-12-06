@@ -1,6 +1,6 @@
 @use "./variables" as *;
 @use "./breakpoints" as *;
-@use "./mixins" as *;
+@use "./typography" as *;
 
 .footer {
   background-color: $primary-font-color;

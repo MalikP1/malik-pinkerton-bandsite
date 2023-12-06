@@ -1,0 +1,116 @@
+@use "./breakpoints" as *;
+
+@font-face {
+  font-family: Avenir;
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype"),
+    url("../../assets/fonts/alternative-files/AvenirNextLTProBold.ttf")
+      format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Avenir;
+  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype"),
+    url("../../assets/fonts/alternative-files/AvenirNextLTProDemi.ttf")
+      format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Avenir;
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype"),
+    url("../../assets/fonts/alternative-files/AvenirNextLTPro.ttf")
+      format("truetype");
+  font-weight: 400;
+}
+
+$site-man-font: "Avenir";
+
+@mixin regular-font {
+  font-family: $site-man-font;
+  font-weight: 400;
+}
+
+@mixin demi-font {
+  font-family: $site-man-font;
+  font-weight: 600;
+}
+
+@mixin bold-font {
+  font-family: $site-man-font;
+  font-weight: 700;
+}
+
+@mixin page-header {
+  @include bold-font;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  @include tablet {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+  }
+}
+@mixin section-header {
+  @include bold-font;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  @include tablet {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
+}
+@mixin sub-header {
+  @include demi-font;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  @include tablet {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+@mixin body {
+  @include regular-font;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  @include tablet {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+@mixin footer {
+  @include regular-font;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  @include tablet {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+@mixin labels-and-buttons {
+  @include bold-font;
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+  @include tablet {
+    font-size: 0.75rem;
+  }
+}
+@mixin padding-between-components {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  @include tablet {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
+}
+@mixin padding-after-headlines {
+  padding-top: 1rem;
+  @include tablet {
+    padding-top: 2.25rem;
+  }
+}
+@mixin padding-before-headlines {
+  padding-top: 1.5rem;
+  @include tablet {
+    padding-top: 3rem;
+  }
+}
