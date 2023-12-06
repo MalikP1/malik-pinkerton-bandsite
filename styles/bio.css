@@ -524,19 +524,18 @@ body {
     padding-top: 3rem;
   }
 }
-.conversation__name {
-  padding-top: 1rem;
+.conversation__form {
   display: flex;
-}
-@media screen and (min-width: 768px) {
-  .conversation__name {
-    padding-top: 2.25rem;
-  }
+  width: 100%;
+  border-bottom: 4px solid #e1e1e1;
 }
 .conversation__avatar {
   border-radius: 50%;
   width: 2.25rem;
   height: 2.25rem;
+}
+.conversation__avatar-container {
+  padding-right: 1rem;
 }
 @media screen and (min-width: 768px) {
   .conversation__avatar {
@@ -544,10 +543,12 @@ body {
     height: 3rem;
   }
 }
-.conversation__comment {
+.conversation__comments {
   display: flex;
   flex-direction: column;
   align-items: end;
+  width: 80%;
+  padding-bottom: 1rem;
 }
 .conversation__button {
   display: flex;
@@ -556,13 +557,14 @@ body {
   color: #ffffff;
   background-color: #323232;
   padding: 1rem 0;
-  width: 20%;
+  width: 100%;
   height: 2.5rem;
   font-family: "Avenir";
   font-weight: 700;
   font-size: 0.625rem;
   line-height: 1.25rem;
   border-radius: 4px;
+  margin-top: 1rem;
 }
 @media screen and (min-width: 768px) {
   .conversation__button {
@@ -576,6 +578,67 @@ body {
   .conversation__button {
     width: 9.375rem;
     padding: 0 2rem;
+  }
+}
+
+.name__label {
+  color: #afafaf;
+  font-family: "Avenir";
+  font-weight: 700;
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .name__label {
+    font-size: 0.75rem;
+  }
+}
+.name__input {
+  color: #323232;
+  font-family: "Avenir";
+  font-weight: 400;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  width: 100%;
+  border-color: #afafaf;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .name__input {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+
+.comment__label {
+  color: #afafaf;
+  font-family: "Avenir";
+  font-weight: 700;
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .comment__label {
+    font-size: 0.75rem;
+  }
+}
+.comment__input {
+  color: #323232;
+  font-family: "Avenir";
+  font-weight: 400;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  width: 100%;
+  border-color: #afafaf;
+  border-radius: 5px;
+}
+@media screen and (min-width: 768px) {
+  .comment__input {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
   }
 }
 
