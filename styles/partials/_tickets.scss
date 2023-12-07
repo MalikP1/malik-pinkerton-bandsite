@@ -1,12 +1,45 @@
 @use "./typography" as *;
 @use "./breakpoints" as *;
+@use "./mixins" as *;
+@use "./variables" as *;
 
 .tickets {
   &__title {
     @include section-header;
     padding: 1.5rem 0 1rem 1rem;
+    margin: 0;
     @include tablet {
       padding: 3rem 2.25rem 2.25rem;
+    }
+  }
+}
+.ticket {
+  @include padding-between-components;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid $divider-line-color;
+  &__button {
+    @include button;
+  }
+  &__date-label,
+  &__venue-label,
+  &__location-label {
+    margin: 0;
+    @include labels-and-buttons;
+    color: $secondary-font-color;
+    padding-top: 1rem;
+  }
+  &__date,
+  &__venue,
+  &__location {
+    margin: 0;
+    @include body;
+  }
+  &__date {
+    @include demi-font;
+    &-label {
+      padding: 0;
     }
   }
 }

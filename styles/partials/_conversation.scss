@@ -15,7 +15,7 @@
   &__form {
     display: flex;
     width: 100%;
-    border-bottom: 4px solid $divider-line-color;
+    border-bottom: 2px solid $divider-line-color;
   }
   //   &__name {
   //     @include padding-after-headlines;
@@ -41,24 +41,7 @@
     padding-bottom: 1rem;
   }
   &__button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: $tertiary-font-color;
-    background-color: $primary-font-color;
-    padding: 1rem 0;
-    width: 100%;
-    height: 2.5rem;
-    @include labels-and-buttons;
-    border-radius: 4px;
-    margin-top: 1rem;
-    &:hover {
-      background-color: $hover-font-color;
-    }
-    @include tablet {
-      width: 9.375rem;
-      padding: 0 2rem;
-    }
+    @include button;
   }
 }
 

@@ -1,6 +1,7 @@
 @use "./variables" as *;
 @use "./typography" as *;
 @use "./breakpoints" as *;
+@use "./mixins" as *;
 
 .hero {
   background-size: cover;
@@ -18,6 +19,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    height: 100%;
   }
   &__heading {
     height: 50%;
@@ -47,5 +49,11 @@
   }
   &__sub-title {
     @include sub-header;
+  }
+  &__song {
+    &-container {
+      width: 90%;
+      @include padding-between-components;
+    }
   }
 }

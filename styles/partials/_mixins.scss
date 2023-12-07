@@ -1,4 +1,6 @@
-@use "./partials/breakpoints" as *;
+@use "./breakpoints" as *;
+@use "./variables" as *;
+@use "./typography" as *;
 
 @mixin padding-between-components {
   padding-left: 1rem;
@@ -18,5 +20,26 @@
   padding-top: 1.5rem;
   @include tablet {
     padding-top: 3rem;
+  }
+}
+
+@mixin button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $tertiary-font-color;
+  background-color: $primary-font-color;
+  padding: 1rem 0;
+  width: 100%;
+  height: 2.5rem;
+  @include labels-and-buttons;
+  border-radius: 4px;
+  margin-top: 1rem;
+  &:hover {
+    background-color: $hover-font-color;
+  }
+  @include tablet {
+    width: 9.375rem;
+    padding: 0 2rem;
   }
 }

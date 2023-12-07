@@ -114,6 +114,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  height: 100%;
 }
 .hero__heading {
   height: 50%;
@@ -163,6 +164,17 @@ body {
   .hero__sub-title {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+}
+.hero__song-container {
+  width: 90%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .hero__song-container {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
   }
 }
 
@@ -291,7 +303,7 @@ body {
   }
 }
 .gallery__images {
-  width: 100%;
+  width: 95%;
 }
 @media screen and (min-width: 768px) {
   .gallery__images {
@@ -309,7 +321,7 @@ body {
 }
 .gallery__image {
   margin: 1rem 1rem 0;
-  width: 100%;
+  width: 95%;
   filter: grayscale(1);
 }
 .gallery__image:hover {
@@ -527,7 +539,7 @@ body {
 .conversation__form {
   display: flex;
   width: 100%;
-  border-bottom: 4px solid #e1e1e1;
+  border-bottom: 2px solid #e1e1e1;
 }
 .conversation__avatar {
   border-radius: 50%;
@@ -637,6 +649,79 @@ body {
 }
 @media screen and (min-width: 768px) {
   .comment__input {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+
+.comments {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .comments {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
+}
+
+.comment {
+  padding: 1rem 0;
+  display: flex;
+  border-bottom: 2px solid #e1e1e1;
+}
+.comment__container {
+  width: 100%;
+}
+.comment__name {
+  font-family: "Avenir";
+  font-weight: 400;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-family: "Avenir";
+  font-weight: 600;
+  margin: 0;
+}
+@media screen and (min-width: 768px) {
+  .comment__name {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+.comment__name-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.comment__avatar {
+  border-radius: 50%;
+  width: 2.25rem;
+  height: 2.25rem;
+  background-color: #e1e1e1;
+  margin-right: 1rem;
+}
+.comment__date {
+  font-family: "Avenir";
+  font-weight: 400;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  color: #afafaf;
+}
+@media screen and (min-width: 768px) {
+  .comment__date {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+.comment__text {
+  font-family: "Avenir";
+  font-weight: 400;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  margin: 0;
+}
+@media screen and (min-width: 768px) {
+  .comment__text {
     font-size: 0.875rem;
     line-height: 1.375rem;
   }
