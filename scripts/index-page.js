@@ -79,12 +79,14 @@ const handleSubmit = (event) => {
   if (event.target.name.value === "" || event.target.comment.value === "") {
     return "Please enter a name and comment";
   }
-
+  //   let dateEl = today.toLocaleDateString("en-US");
   const newComment = {
     name: event.target.name.value,
     comment: event.target.comment.value,
     image: "",
-    // date: event.target.date.value,
+    // date: new Date(),
+    date: "",
+    // date: dateEl,
   };
 
   comment.unshift(newComment);

@@ -6,19 +6,21 @@
 .tickets {
   &__title {
     @include section-header;
-    padding: 1.5rem 0 1rem 1rem;
+    padding: 1.5rem 0 0 1rem;
     margin: 0;
     @include tablet {
-      padding: 3rem 2.25rem 2.25rem;
+      padding: 3rem 2.25rem 1.25rem;
     }
   }
 }
 .ticket {
-  @include padding-between-components;
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 1rem;
-  border-bottom: 2px solid $divider-line-color;
+  &-container {
+    @include padding-between-components;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid $divider-line-color;
+  }
   &__button {
     @include button;
   }
@@ -39,7 +41,6 @@
   &__date {
     @include demi-font;
     &-label {
-      padding: 0;
     }
   }
 }

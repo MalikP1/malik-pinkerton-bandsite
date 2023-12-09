@@ -673,6 +673,9 @@ body {
 .comment__container {
   width: 100%;
 }
+.comment__input {
+  resize: none;
+}
 .comment__name {
   font-family: "Avenir";
   font-weight: 400;

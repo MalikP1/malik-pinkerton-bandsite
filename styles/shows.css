@@ -337,7 +337,7 @@ body {
   font-weight: 700;
   font-size: 1.5rem;
   line-height: 2rem;
-  padding: 1.5rem 0 1rem 1rem;
+  padding: 1.5rem 0 0 1rem;
   margin: 0;
 }
 @media screen and (min-width: 768px) {
@@ -348,11 +348,11 @@ body {
 }
 @media screen and (min-width: 768px) {
   .tickets__title {
-    padding: 3rem 2.25rem 2.25rem;
+    padding: 3rem 2.25rem 1.25rem;
   }
 }
 
-.ticket {
+.ticket-container {
   padding-left: 1rem;
   padding-right: 1rem;
   display: flex;
@@ -361,7 +361,7 @@ body {
   border-bottom: 2px solid #e1e1e1;
 }
 @media screen and (min-width: 768px) {
-  .ticket {
+  .ticket-container {
     padding-left: 2.25rem;
     padding-right: 2.25rem;
   }
@@ -426,7 +426,4 @@ body {
 .ticket__date {
   font-family: "Avenir";
   font-weight: 600;
-}
-.ticket__date-label {
-  padding: 0;
 }/*# sourceMappingURL=shows.css.map */
