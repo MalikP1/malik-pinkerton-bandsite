@@ -15,12 +15,16 @@
   &__form {
     display: flex;
     width: 100%;
-    border-bottom: 2px solid $divider-line-color;
+    border-bottom: 1px solid $divider-line-color;
+    padding-top: 1rem;
+    @include tablet {
+      width: 80%;
+      margin: 0 auto;
+    }
+    @include desktop {
+      width: 60%;
+    }
   }
-  //   &__name {
-  //     @include padding-after-headlines;
-  //     display: flex;
-  //   }
   &__avatar {
     border-radius: 50%;
     width: 2.25rem;
@@ -50,14 +54,25 @@
     color: $secondary-font-color;
     @include labels-and-buttons;
     width: 100%;
+    padding-bottom: 4px;
   }
   &__input {
     color: $primary-font-color;
     @include body;
     width: 100%;
-    border-radius: 5px;
+    border-radius: 4px;
     margin-bottom: 1rem;
     border: 1px solid $secondary-font-color;
+    background-color: $alternative-background-color;
+    padding: 0.5rem;
+    height: 2.25rem;
+    &:active {
+      border: 1px solid $hover-font-color;
+    }
+    @include tablet {
+      height: 3rem;
+      padding: 1rem;
+    }
   }
 }
 .comment {
