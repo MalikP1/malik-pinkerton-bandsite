@@ -20,9 +20,16 @@
     align-items: flex-start;
     justify-content: center;
     height: 100%;
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
   }
   &__heading {
-    height: 50%;
+    @include desktop {
+      width: 65%;
+    }
   }
   @include tablet {
     height: 30rem;
@@ -34,26 +41,56 @@
   &__sub-title {
     color: $tertiary-font-color;
     margin: 0;
-    padding-left: 1rem;
-    &--next-line {
-      display: block;
-    }
+    @include padding-between-components;
     @include desktop {
       padding-left: 2.25rem;
     }
   }
   &__title {
     @include page-header;
+    &--next-line {
+      display: block;
+      @include desktop {
+        display: inline-block;
+      }
+    }
     &--padding {
+      @include padding-after-headlines;
+
+      @include desktop {
+        padding-right: 0;
+      }
     }
   }
   &__sub-title {
     @include sub-header;
+    @include padding-before-headlines;
+    @include desktop {
+      padding-top: 0;
+    }
   }
   &__song {
+    height: 5rem;
+    @include tablet {
+      height: 7rem;
+    }
+    @include desktop {
+      width: 80%;
+    }
     &-container {
-      width: 90%;
+      width: 100%;
       @include padding-between-components;
+      @include padding-after-headlines;
+      margin-bottom: 2rem;
+      @include tablet {
+        width: 60%;
+      }
+      @include desktop {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        align-items: center;
+      }
     }
   }
 }

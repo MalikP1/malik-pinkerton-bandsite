@@ -15,14 +15,32 @@
 }
 .ticket {
   &-container {
-    @include padding-between-components;
     display: flex;
     flex-direction: column;
-    padding-bottom: 1rem;
-    border-bottom: 2px solid $divider-line-color;
+    padding: 0 1rem 1rem;
+    border-bottom: 1px solid $divider-line-color;
+    @include tablet {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      padding: 1.5rem 0;
+      &:hover {
+        background-color: $alternative-background-color;
+      }
+      &:active {
+        background-color: $divider-line-color;
+      }
+    }
+    @include desktop {
+      width: 70%;
+      margin-left: auto;
+    }
   }
   &__button {
     @include button;
+    @include tablet {
+      margin: 0;
+    }
   }
   &__date-label,
   &__venue-label,
@@ -31,6 +49,9 @@
     @include labels-and-buttons;
     color: $secondary-font-color;
     padding-top: 1rem;
+    @include tablet {
+      display: none;
+    }
   }
   &__date,
   &__venue,
@@ -40,7 +61,33 @@
   }
   &__date {
     @include demi-font;
-    &-label {
+  }
+}
+
+.tablet-labels {
+  display: flex;
+  justify-content: space-evenly;
+  width: 74%;
+  @include desktop {
+    width: 35%;
+    margin-left: 35%;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+  }
+  &__date,
+  &__venue,
+  &__location {
+    display: none;
+    margin: 0;
+    @include labels-and-buttons;
+    color: $secondary-font-color;
+    @include tablet {
+      display: flex;
+    }
+  }
+  &__venue {
+    @include desktop {
+      padding-left: 4rem;
     }
   }
 }

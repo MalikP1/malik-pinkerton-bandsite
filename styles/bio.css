@@ -117,8 +117,17 @@ body {
   justify-content: center;
   height: 100%;
 }
-.hero__heading {
-  height: 50%;
+@media screen and (min-width: 1280px) {
+  .hero--shows {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__heading {
+    width: 65%;
+  }
 }
 @media screen and (min-width: 768px) {
   .hero {
@@ -134,9 +143,13 @@ body {
   color: #ffffff;
   margin: 0;
   padding-left: 1rem;
+  padding-right: 1rem;
 }
-.hero__title--next-line, .hero__sub-title--next-line {
-  display: block;
+@media screen and (min-width: 768px) {
+  .hero__title, .hero__sub-title {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
 }
 @media screen and (min-width: 1280px) {
   .hero__title, .hero__sub-title {
@@ -155,11 +168,33 @@ body {
     line-height: 4.25rem;
   }
 }
+.hero__title--next-line {
+  display: block;
+}
+@media screen and (min-width: 1280px) {
+  .hero__title--next-line {
+    display: inline-block;
+  }
+}
+.hero__title--padding {
+  padding-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .hero__title--padding {
+    padding-top: 2.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__title--padding {
+    padding-right: 0;
+  }
+}
 .hero__sub-title {
   font-family: "Avenir";
   font-weight: 600;
   font-size: 0.875rem;
   line-height: 1.375rem;
+  padding-top: 1.5rem;
 }
 @media screen and (min-width: 768px) {
   .hero__sub-title {
@@ -167,15 +202,58 @@ body {
     line-height: 2rem;
   }
 }
+@media screen and (min-width: 768px) {
+  .hero__sub-title {
+    padding-top: 3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__sub-title {
+    padding-top: 0;
+  }
+}
+.hero__song {
+  height: 5rem;
+}
+@media screen and (min-width: 768px) {
+  .hero__song {
+    height: 7rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__song {
+    width: 80%;
+  }
+}
 .hero__song-container {
-  width: 90%;
+  width: 100%;
   padding-left: 1rem;
   padding-right: 1rem;
+  padding-top: 1rem;
+  margin-bottom: 2rem;
 }
 @media screen and (min-width: 768px) {
   .hero__song-container {
     padding-left: 2.25rem;
     padding-right: 2.25rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero__song-container {
+    padding-top: 2.25rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero__song-container {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__song-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    align-items: center;
   }
 }
 
