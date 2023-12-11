@@ -720,6 +720,9 @@ body {
     line-height: 1.375rem;
   }
 }
+.name__input--error {
+  border: 1px solid #d22d2d;
+}
 .name__input:active {
   border: 1px solid #000000;
 }
@@ -796,6 +799,9 @@ body {
   background-color: #fafafa;
   padding: 0.5rem;
   border-radius: 4px;
+}
+.comment__input--error {
+  border: 1px solid #d22d2d;
 }
 .comment__input:active {
   border: 1px solid #000000;

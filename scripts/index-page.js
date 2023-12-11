@@ -76,10 +76,20 @@ const formEl = document.querySelector(".conversation__form");
 const handleSubmit = (event) => {
   event.preventDefault();
 
-  if (event.target.name.value === "" || event.target.comment.value === "") {
-    return "Please enter a name and comment";
-  }
+  // if (event.target.name.value === "" || event.target.comment.value === "") {
+  //   return "Please enter a name and comment";
+  // }
+  const nameInputEl = document.querySelector(".name__input");
+  const commentInputEl = document.querySelector(".comment__input");
 
+  if (event.target.name.value === "") {
+    nameInputEl.classList.add(".name__input--error");
+    return (nameInputEl.innerText = "Please enter a name");
+  }
+  if (event.target.comment.value === "") {
+    commentInputEl.classList.add(".comment__input--error");
+    return (commentInputEl.innerText = "Please enter a comment");
+  }
   const newComment = {
     name: event.target.name.value,
     comment: event.target.comment.value,

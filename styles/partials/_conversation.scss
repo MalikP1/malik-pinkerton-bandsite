@@ -66,6 +66,9 @@
     background-color: $alternative-background-color;
     padding: 0.5rem;
     height: 2.25rem;
+    &--error {
+      border: 1px solid #d22d2d;
+    }
     &:active {
       border: 1px solid $hover-font-color;
     }
