@@ -1,30 +1,3 @@
-// const comment =
-// [
-// {
-//   name: "Connor Walton",
-//   comment:
-//     "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-//   date: "02/17/2021",
-//   image: "",
-// },
-// {
-//   name: "Emilie Beach",
-//   comment:
-//     "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-//   date: "01/09/2021",
-//   image: "",
-// },
-// {
-//   name: "Miles Acosta",
-//   comment:
-//     "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-//   date: "12/20/2020",
-//   image: "",
-// },
-// ];
-
-// console.log(comment);
-
 const renderComment = async () => {
   const sectionEl = document.querySelector(".comments");
 
@@ -62,7 +35,9 @@ const renderComment = async () => {
 
     const dateEl = document.createElement("p");
     dateEl.classList.add("comment__date");
-    dateEl.innerHTML = comment[i].timestamp;
+    dateEl.innerHTML = new Date(comment[i].timestamp).toLocaleDateString(
+      "es-pa"
+    );
 
     divNameEl.appendChild(dateEl);
 
@@ -80,7 +55,7 @@ renderComment();
 
 const formEl = document.querySelector(".conversation__form");
 
-const handleSubmit = (event) => {
+const handleSubmit = async (event) => {
   event.preventDefault();
 
   const nameInputEl = document.querySelector(".name__input");
@@ -97,13 +72,12 @@ const handleSubmit = (event) => {
   const newComment = {
     name: event.target.name.value,
     comment: event.target.comment.value,
-    image: "",
-    date: new Date().toLocaleDateString("es-pa"),
   };
 
-  comment.unshift(newComment);
-  renderComment();
+  // comment.unshift(newComment);
   formEl.reset();
+  const post = await api.postComment(newComment);
+  renderComment();
 };
 
 formEl.addEventListener("submit", handleSubmit);
