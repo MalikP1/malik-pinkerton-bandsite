@@ -2,8 +2,7 @@ const renderComment = async () => {
   const sectionEl = document.querySelector(".comments");
 
   const comment = await api.getComments();
-
-  sectionEl.innerHTML = "";
+  sectionEl.innerText = "";
 
   const image = "";
 
@@ -13,7 +12,7 @@ const renderComment = async () => {
 
     const divAvatarEl = document.createElement("div");
     divAvatarEl.classList.add("comment__avatar");
-    divAvatarEl.innerHTML = image;
+    divAvatarEl.innerText = image;
 
     articleEl.appendChild(divAvatarEl);
 
@@ -29,13 +28,13 @@ const renderComment = async () => {
 
     const nameEl = document.createElement("h4");
     nameEl.classList.add("comment__name");
-    nameEl.innerHTML = comment[i].name;
+    nameEl.innerText = comment[i].name;
 
     divNameEl.appendChild(nameEl);
 
     const dateEl = document.createElement("p");
     dateEl.classList.add("comment__date");
-    dateEl.innerHTML = new Date(comment[i].timestamp).toLocaleDateString(
+    dateEl.innerText = new Date(comment[i].timestamp).toLocaleDateString(
       "es-pa"
     );
 
@@ -43,7 +42,7 @@ const renderComment = async () => {
 
     const textEl = document.createElement("p");
     textEl.classList.add("comment__text");
-    textEl.innerHTML = comment[i].comment;
+    textEl.innerText = comment[i].comment;
 
     divCommentEl.appendChild(textEl);
 
@@ -77,6 +76,10 @@ const handleSubmit = async (event) => {
   // comment.unshift(newComment);
   formEl.reset();
   const post = await api.postComment(newComment);
+  // comment.timestamp.sort(a, b);
+  // () => {
+  //   return b - a;
+  // };
   renderComment();
 };
 

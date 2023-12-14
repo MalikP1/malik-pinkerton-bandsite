@@ -15,7 +15,7 @@ const renderShows = async () => {
 
     const dateEl = document.createElement("p");
     dateEl.classList.add("ticket__date");
-    dateEl.innerHTML = new Date(ticket[i].date).toLocaleDateString("es-pa");
+    dateEl.innerText = new Date(ticket[i].date).toDateString();
 
     articleEl.appendChild(dateEl);
 
@@ -27,7 +27,7 @@ const renderShows = async () => {
 
     const venueEl = document.createElement("p");
     venueEl.classList.add("ticket__venue");
-    venueEl.innerHTML = ticket[i].place;
+    venueEl.innerText = ticket[i].place;
 
     articleEl.appendChild(venueEl);
 
@@ -39,7 +39,7 @@ const renderShows = async () => {
 
     const locationEl = document.createElement("p");
     locationEl.classList.add("ticket__location");
-    locationEl.innerHTML = ticket[i].location;
+    locationEl.innerText = ticket[i].location;
 
     articleEl.appendChild(locationEl);
 
