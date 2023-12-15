@@ -3,7 +3,7 @@ const formEl = document.querySelector(".ticket");
 const renderShows = async () => {
   const ticket = await api.getShows();
 
-  for (let i = 0; i < ticket.length; i++) {
+  ticket.forEach((eachTicket) => {
     articleEl = document.createElement("article");
     articleEl.classList.add("ticket-container");
 
@@ -15,7 +15,7 @@ const renderShows = async () => {
 
     const dateEl = document.createElement("p");
     dateEl.classList.add("ticket__date");
-    dateEl.innerText = new Date(ticket[i].date).toDateString();
+    dateEl.innerText = new Date(eachTicket.date).toDateString();
 
     articleEl.appendChild(dateEl);
 
@@ -27,7 +27,7 @@ const renderShows = async () => {
 
     const venueEl = document.createElement("p");
     venueEl.classList.add("ticket__venue");
-    venueEl.innerText = ticket[i].place;
+    venueEl.innerText = eachTicket.place;
 
     articleEl.appendChild(venueEl);
 
@@ -39,7 +39,7 @@ const renderShows = async () => {
 
     const locationEl = document.createElement("p");
     locationEl.classList.add("ticket__location");
-    locationEl.innerText = ticket[i].location;
+    locationEl.innerText = eachTicket.location;
 
     articleEl.appendChild(locationEl);
 
@@ -50,7 +50,7 @@ const renderShows = async () => {
     articleEl.appendChild(buttonEl);
 
     formEl.appendChild(articleEl);
-  }
+  });
 };
 
 renderShows();

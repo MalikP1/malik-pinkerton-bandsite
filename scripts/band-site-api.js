@@ -1,3 +1,6 @@
+const nameInputEl = document.querySelector(".name__input");
+const commentInputEl = document.querySelector(".comment__input");
+
 class BandSiteApi {
   constructor(apiKey) {
     this.apiKey = `api_key=530f64ae-746e-46b1-8d28-808d12b9b596`;
@@ -7,25 +10,39 @@ class BandSiteApi {
   }
 
   async getComments() {
-    const response = await axios.get(this.baseUrl + this.comment + this.apiKey);
-    const commentsData = response.data;
-    return commentsData;
+    try {
+      const response = await axios.get(
+        this.baseUrl + this.comment + this.apiKey
+      );
+      const commentsData = response.data;
+      return commentsData;
+    } catch (error) {
+      console.log(error);
+      commentInputEl.innerText = "Failed to get comments.";
+    }
   }
 
   async getShows() {
-    const response = await axios.get(this.baseUrl + this.show + this.apiKey);
-    const showsData = response.data;
-    return showsData;
+    try {
+      const response = await axios.get(this.baseUrl + this.show + this.apiKey);
+      const showsData = response.data;
+      return showsData;
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   async postComment(comment) {
-    const response = await axios.post(
-      this.baseUrl + this.comment + this.apiKey,
-      comment
-    );
-    return comment;
+    try {
+      const response = await axios.post(
+        this.baseUrl + this.comment + this.apiKey,
+        comment
+      );
+      return comment;
+    } catch (error) {
+      console.log(error);
+      commentInputEl.innerText = "Failed to post comment.";
+    }
   }
 }
 const api = new BandSiteApi();
-
-api.postComment();

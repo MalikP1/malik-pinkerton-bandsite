@@ -13,29 +13,29 @@
     }
   }
 }
-.ticket {
-  &-container {
-    display: flex;
-    flex-direction: column;
-    padding: 0 1rem 1rem;
-    border-bottom: 1px solid $divider-line-color;
-    @include tablet {
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-evenly;
-      padding: 1.5rem 0;
-      &:hover {
-        background-color: $alternative-background-color;
-      }
-      &:active {
-        background-color: $divider-line-color;
-      }
+.ticket-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem 1rem;
+  border-bottom: 1px solid $divider-line-color;
+  @include tablet {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1.5rem 0;
+    &:hover {
+      background-color: $alternative-background-color;
     }
-    @include desktop {
-      width: 70%;
-      margin-left: auto;
+    &:active {
+      background-color: $divider-line-color;
     }
   }
+  @include desktop {
+    width: 70%;
+    margin-left: auto;
+  }
+}
+.ticket {
   &__button {
     @include button;
     @include tablet {

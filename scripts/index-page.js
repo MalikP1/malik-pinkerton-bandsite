@@ -1,53 +1,60 @@
-const renderComment = async () => {
+const createComment = function (comment) {
   const sectionEl = document.querySelector(".comments");
-
-  const comment = await api.getComments();
-  sectionEl.innerText = "";
 
   const image = "";
 
-  for (let i = 0; i < comment.length; i++) {
-    const articleEl = document.createElement("article");
-    articleEl.classList.add("comment");
+  const articleEl = document.createElement("article");
+  articleEl.classList.add("comment");
 
-    const divAvatarEl = document.createElement("div");
-    divAvatarEl.classList.add("comment__avatar");
-    divAvatarEl.innerText = image;
+  const divAvatarEl = document.createElement("div");
+  divAvatarEl.classList.add("comment__avatar");
+  divAvatarEl.innerText = image;
 
-    articleEl.appendChild(divAvatarEl);
+  articleEl.appendChild(divAvatarEl);
 
-    const divCommentEl = document.createElement("div");
-    divCommentEl.classList.add("comment__container");
+  const divCommentEl = document.createElement("div");
+  divCommentEl.classList.add("comment__container");
 
-    articleEl.appendChild(divCommentEl);
+  articleEl.appendChild(divCommentEl);
 
-    const divNameEl = document.createElement("div");
-    divNameEl.classList.add("comment__name-container");
+  const divNameEl = document.createElement("div");
+  divNameEl.classList.add("comment__name-container");
 
-    divCommentEl.appendChild(divNameEl);
+  divCommentEl.appendChild(divNameEl);
 
-    const nameEl = document.createElement("h4");
-    nameEl.classList.add("comment__name");
-    nameEl.innerText = comment[i].name;
+  const nameEl = document.createElement("h4");
+  nameEl.classList.add("comment__name");
+  nameEl.innerText = comment.name;
 
-    divNameEl.appendChild(nameEl);
+  divNameEl.appendChild(nameEl);
 
-    const dateEl = document.createElement("p");
-    dateEl.classList.add("comment__date");
-    dateEl.innerText = new Date(comment[i].timestamp).toLocaleDateString(
-      "es-pa"
-    );
+  const dateEl = document.createElement("p");
+  dateEl.classList.add("comment__date");
+  dateEl.innerText = new Date(comment.timestamp).toLocaleDateString("es-pa");
 
-    divNameEl.appendChild(dateEl);
+  divNameEl.appendChild(dateEl);
 
-    const textEl = document.createElement("p");
-    textEl.classList.add("comment__text");
-    textEl.innerText = comment[i].comment;
+  const textEl = document.createElement("p");
+  textEl.classList.add("comment__text");
+  textEl.innerText = comment.comment;
 
-    divCommentEl.appendChild(textEl);
+  divCommentEl.appendChild(textEl);
 
-    sectionEl.appendChild(articleEl);
-  }
+  sectionEl.appendChild(articleEl);
+};
+
+const renderComment = async () => {
+  const sectionEl = document.querySelector(".comments");
+
+  const comments = await api.getComments();
+  sectionEl.innerText = "";
+
+  const image = "";
+  comments.sort((a, b) => {
+    return b.timestamp - a.timestamp;
+  });
+  console.log(comments);
+  comments.forEach(createComment);
 };
 
 renderComment();
@@ -57,30 +64,35 @@ const formEl = document.querySelector(".conversation__form");
 const handleSubmit = async (event) => {
   event.preventDefault();
 
-  const nameInputEl = document.querySelector(".name__input");
-  const commentInputEl = document.querySelector(".comment__input");
-
-  if (event.target.name.value === "") {
-    nameInputEl.classList.add(".name__input--error");
-    return (nameInputEl.innerText = "Please enter a name");
-  }
-  if (event.target.comment.value === "") {
-    commentInputEl.classList.add(".comment__input--error");
-    return (commentInputEl.innerText = "Please enter a comment");
+  if (event.target.name.value === "" && event.target.comment.value === "") {
+    nameInputEl.classList.add("name__input--error");
+    nameInputEl.placeholder = "Please enter a name";
+    commentInputEl.classList.add("comment__input--error");
+    commentInputEl.placeholder = "Please enter a comment";
+    return;
+  } else if (event.target.name.value === "") {
+    nameInputEl.classList.add("name__input--error");
+    nameInputEl.placeholder = "Please enter a name";
+    return;
+  } else if (event.target.comment.value === "") {
+    commentInputEl.classList.add("comment__input--error");
+    commentInputEl.placeholder = "Please enter a comment";
+    return;
   }
   const newComment = {
     name: event.target.name.value,
     comment: event.target.comment.value,
   };
 
-  // comment.unshift(newComment);
   formEl.reset();
   const post = await api.postComment(newComment);
-  // comment.timestamp.sort(a, b);
-  // () => {
-  //   return b - a;
-  // };
   renderComment();
 };
 
+const onClick = async (event) => {
+  nameInputEl.classList.remove("name__input--error");
+  commentInputEl.classList.remove("comment__input--error");
+};
+
 formEl.addEventListener("submit", handleSubmit);
+formEl.addEventListener("click", onClick);
