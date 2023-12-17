@@ -60,6 +60,8 @@ renderShows();
 const handleSubmit = (event) => {
   event.preventDefault();
 };
+// Attempted to add active state to shows page with JS, but couldn't get it working.
+
 // const ticketContainer = document.querySelectorAll(".ticket-container");
 
 // const whenActive = (event) => {
